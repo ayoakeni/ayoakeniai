@@ -8,7 +8,7 @@ import {
   query,
   orderBy,
 } from "firebase/firestore";
-import TextEditor from "../components/TextEditor";
+import TextEditor from "../components/textEditor";
 import SafeHtml from "../components/safeHtml";
 
 const AssignmentUploader = () => {
@@ -16,14 +16,14 @@ const AssignmentUploader = () => {
   const [showModal, setShowModal] = useState(false);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const [loading, setLoading] = useState(false); // Indicator for both uploading and fetching
-  const [listLoading, setListLoading] = useState(true); // Indicator for fetching assignments
-  const [successMessage, setSuccessMessage] = useState(""); // Success message
-  const [errorMessage, setErrorMessage] = useState(""); // Error message for network issues
+  const [loading, setLoading] = useState(false);
+  const [listLoading, setListLoading] = useState(true);
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const fetchAssignments = async () => {
-    setListLoading(true); // Start loading for fetching assignments
-    setErrorMessage(""); // Clear previous errors
+    setListLoading(true);
+    setErrorMessage("");
     try {
       const q = query(
         collection(db, "assignments"),
@@ -39,7 +39,7 @@ const AssignmentUploader = () => {
       console.error("Error fetching assignments:", error);
       setErrorMessage("Failed to load assignments. Please check your network.");
     } finally {
-      setListLoading(false); // Stop loading for fetching assignments
+      setListLoading(false);
     }
   };
 
@@ -49,9 +49,9 @@ const AssignmentUploader = () => {
       return;
     }
 
-    setLoading(true); // Start loading for upload
-    setSuccessMessage(""); // Clear any previous success message
-    setErrorMessage(""); // Clear previous errors
+    setLoading(true);
+    setSuccessMessage("");
+    setErrorMessage("");
 
     try {
       await addDoc(collection(db, "assignments"), {
@@ -70,7 +70,7 @@ const AssignmentUploader = () => {
         "Failed to upload the assignment. Please check your network and try again."
       );
     } finally {
-      setLoading(false); // Stop loading for upload
+      setLoading(false);
     }
   };
 
@@ -85,7 +85,7 @@ const AssignmentUploader = () => {
         setSuccessMessage("");
         setErrorMessage("");
       }, 3000);
-      return () => clearTimeout(timeout); // Cleanup timeout
+      return () => clearTimeout(timeout);
     }
   }, [successMessage, errorMessage]);
 
@@ -131,14 +131,14 @@ const AssignmentUploader = () => {
               <button
                 onClick={handleUpload}
                 className="modal-upload-btn"
-                disabled={loading} // Disable button while loading
+                disabled={loading}
               >
                 {loading ? "Uploading..." : "Upload"}
               </button>
               <button
                 onClick={() => setShowModal(false)}
                 className="modal-cancel-btn"
-                disabled={loading} // Disable cancel while uploading
+                disabled={loading}
               >
                 Cancel
               </button>
