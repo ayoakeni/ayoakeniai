@@ -1199,7 +1199,6 @@ progress {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  /* padding: 20px; */
   margin-top: 20px;
 }
 
@@ -1209,7 +1208,6 @@ progress {
   justify-content: space-between;
   gap: 10px;
   border: 1px solid #ccc;
-  /* width: fit-content; */
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
@@ -1268,6 +1266,13 @@ progress {
 
 .assignment-list .assignment-item .time-view .view-link:hover {
   color: goldenrod;
+}
+
+@media (max-width: 340px) {
+  .assignment-list {
+    grid-template-columns: 100%;
+    padding: 20px 0 0;
+  }
 }
 
 .modal-overlay {
