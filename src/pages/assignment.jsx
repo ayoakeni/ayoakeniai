@@ -152,7 +152,7 @@ const AssignmentUploader = () => {
           {assignments.map((assignment, index) => (
             <div key={assignment.id} className="assignment-item">
               <div className="list-question">
-                <h3> Assignment {index + 1}:</h3> 
+                <h3> Assignment {index + 1}</h3> 
                 <SafeHtml htmlContent={assignment.title} fallback="Question is not available." />
               </div>
               <div className="time-view">
