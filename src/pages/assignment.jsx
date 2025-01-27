@@ -26,7 +26,7 @@ const AssignmentUploader = () => {
     setErrorMessage("");
     try {
       const q = query(
-        collection(db, "assignments"),
+        collection(db, "ayoakeni"),
         orderBy("timestamp", "asc")
       );
       const querySnapshot = await getDocs(q);
@@ -54,7 +54,7 @@ const AssignmentUploader = () => {
     setErrorMessage("");
 
     try {
-      await addDoc(collection(db, "assignments"), {
+      await addDoc(collection(db, "ayoakeni"), {
         title,
         content,
         timestamp: serverTimestamp(),
@@ -108,13 +108,6 @@ const AssignmentUploader = () => {
             <p className="modal-note">
               Note: Maximum image size for uploads is 5MB.
             </p>
-            {/* <input
-              type="text"
-              placeholder="Question"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              className="modal-input"
-            /> */}
             <div className="modal-question">
               <TextEditor
                 value={title}

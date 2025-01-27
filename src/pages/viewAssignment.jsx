@@ -12,7 +12,7 @@ const ViewAssignment = () => {
   useEffect(() => {
     const fetchAssignment = async () => {
       try {
-        const docRef = doc(db, "assignments", id);
+        const docRef = doc(db, "ayoakeni", id);
         const docSnap = await getDoc(docRef);
 
         if (docSnap.exists()) {

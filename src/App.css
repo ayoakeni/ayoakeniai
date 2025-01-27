@@ -1211,6 +1211,7 @@ progress {
   padding: 15px;
   background-color: #fff;
   border: 1px solid goldenrod;
+  width: fit-content;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -1301,21 +1302,6 @@ progress {
   color: #333;
 }
 
-/* .modal-content input {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  outline-color: goldenrod;
-  transition: all 0.2s ease;
-}
-
-.modal-content input:focus-within {
-  font-size: 20px;
-} */
-
 .modal-question {
   margin-bottom: 15px !important;
 }
@@ -1371,7 +1357,7 @@ progress {
 }
 
 .modal-content button:hover {
-  background: goldenrod;
+  background: rgb(214, 189, 125);
 }
 
 .modal-close {
