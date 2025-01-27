@@ -155,13 +155,15 @@ const AssignmentUploader = () => {
                 <h3> Assignment {index + 1}:</h3> 
                 <SafeHtml htmlContent={assignment.title} fallback="Question is not available." />
               </div>
-              <p className="assignment-date">
-                Uploaded:{" "}
-                {new Date(assignment.timestamp?.toDate()).toLocaleString()}
-              </p>
-              <a href={`/assignments/${assignment.id}`} className="view-link">
-                View Assignment
-              </a>
+              <div className="time-view">
+                <p className="assignment-date">
+                  Uploaded:{" "}
+                  {new Date(assignment.timestamp?.toDate()).toLocaleString()}
+                </p>
+                <a href={`/assignments/${assignment.id}`} className="view-link">
+                  View Assignment
+                </a>
+              </div>
             </div>
           ))}
         </div>

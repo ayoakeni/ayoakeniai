@@ -1199,7 +1199,7 @@ progress {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  padding: 20px;
+  /* padding: 20px; */
   margin-top: 20px;
 }
 
@@ -1208,11 +1208,10 @@ progress {
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
-  padding: 15px;
-  background-color: #fff;
-  border: 1px solid goldenrod;
-  width: fit-content;
+  border: 1px solid #ccc;
+  /* width: fit-content; */
   border-radius: 8px;
+  overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -1223,13 +1222,15 @@ progress {
 }
 
 .assignment-list .list-question {
-  color: #333;
+  color: #fff;
   max-height: 100px;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
+  padding: 15px;
+  pointer-events: none;
 }
 
 .assignment-list .assignment-item h3 {
@@ -1243,12 +1244,21 @@ progress {
   margin-left: 20px;
 }
 
-.assignment-list .assignment-item .assignment-date {
-  font-size: 14px;
-  color: #888;
+.time-view {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff;
+  padding: 15px;
 }
 
-.assignment-list .assignment-item .view-link {
+.assignment-list .assignment-item .time-view .assignment-date {
+  font-size: 14px;
+  color: #888;
+  pointer-events: none;
+}
+
+.assignment-list .assignment-item  .time-view .view-link {
   align-self: flex-start;
   color: #4a90e2;
   text-decoration: none;
@@ -1256,7 +1266,7 @@ progress {
   transition: color 0.2s ease;
 }
 
-.assignment-list .assignment-item .view-link:hover {
+.assignment-list .assignment-item .time-view .view-link:hover {
   color: goldenrod;
 }
 
