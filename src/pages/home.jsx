@@ -12,7 +12,7 @@ const HomePage = () => {
             <strong>A</strong>rtificial Intelligence
           </h2>
           <p>
-          Empowering the future, one innovation at a time. Where ideas meet intelligence, possibilities become limitless, dreams are transformed into reality, and technology shapes a brighter tomorrow.
+            Empowering the future, one innovation at a time. Where ideas meet intelligence, possibilities become limitless, dreams are transformed into reality, and technology shapes a brighter tomorrow.
           </p>
 
           {/* Social Media Handles */}
