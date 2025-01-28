@@ -9,10 +9,10 @@ const HomePage = () => {
         <div className="textInfo">
           <span>You are welcome!</span>
           <h2>
-            <strong>A</strong>i Submission Assignments Hover all best
+            <strong>A</strong>rtificial Intelligence
           </h2>
           <p>
-            I make and edit short videos 📷 (Social media editor) Front end developer ¤ web developer 👨‍💻 Dm for your website building.
+          Empowering the future, one innovation at a time. Where ideas meet intelligence, possibilities become limitless, dreams are transformed into reality, and technology shapes a brighter tomorrow.
           </p>
 
           {/* Social Media Handles */}
