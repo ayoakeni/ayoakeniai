@@ -24,7 +24,7 @@ function App() {
       </Routes>
       <ScrollToTopButton />
       <WhatsappChatBox />
-      <footer style={{ textAlign: "center", padding: "10px", fontSize: "14px", color: "#666" }}>
+      <footer>
         © 2025 ayoakeni.ai. All Rights Reserved.
       </footer>
     </div>
