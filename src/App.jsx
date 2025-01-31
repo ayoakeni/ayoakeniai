@@ -11,7 +11,7 @@ import WhatsappChatBox from './components/whatsapp';
 import './App.css';
 
 function App() {
-  const currentYear = new Date().getFullYear()
+  // const currentYear = new Date().getFullYear()
   return (
     <div className="App">
       <Navbar />
@@ -25,7 +25,7 @@ function App() {
       <ScrollToTopButton />
       <WhatsappChatBox />
       <footer style={{ textAlign: "center", padding: "10px", fontSize: "14px", color: "#666" }}>
-        © {currentYear} ayoakeni.ai. All Rights Reserved.
+        © 2025 ayoakeni.ai. All Rights Reserved.
       </footer>
     </div>
   );
