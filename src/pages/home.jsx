@@ -1,9 +1,13 @@
 import React from "react";
 import img from "../assets/images/me2.jpg"
+import vid from "../assets/video/ic.mp4"
 
 const HomePage = () => {
   return (
     <section className="home">
+      <div className="videobox">
+        <video src={vid} autoPlay muted loop playsInline />
+      </div>
       <div className="heropage">
         {/* Text Section */}
         <div className="textInfo">
